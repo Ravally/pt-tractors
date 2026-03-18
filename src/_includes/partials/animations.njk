@@ -55,6 +55,163 @@
     display: inline-block;
     transition: transform 0.22s ease;
   }
+
+  /* ═══════════════════════════════════════════════════════════════
+     MOBILE RESPONSIVE — max-width: 767px
+     All site layouts use inline styles (no Tailwind classes), so
+     we target structural containers via IDs and data attributes,
+     plus override via class selectors added for mobile.
+  ═══════════════════════════════════════════════════════════════ */
+
+  @media (max-width: 767px) {
+
+    /* ── GLOBAL ── */
+    * { box-sizing: border-box; }
+
+    /* Prevent horizontal scroll at all costs */
+    body { overflow-x: hidden; }
+
+    /* ── HOME HERO ── */
+    /* Hero section: reduce min-height and padding on mobile */
+    .hero-animate {
+      padding: 48px 0 !important;
+      max-width: 100% !important;
+    }
+
+    /* ── HOME TRUST BAR ──
+       4-col grid → 2-col on mobile */
+    .trust-bar-grid {
+      grid-template-columns: 1fr 1fr !important;
+    }
+    .trust-bar-grid > div {
+      border-right: none !important;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+
+    /* ── HOME SERVICES GRID ──
+       3-col → 1-col on mobile */
+    .services-grid {
+      grid-template-columns: 1fr !important;
+    }
+
+    /* ── HOME WHY P&T — 2-col split ──
+       Stack image above text on mobile */
+    .why-grid {
+      grid-template-columns: 1fr !important;
+      gap: 32px !important;
+    }
+    .why-grid .why-image {
+      height: 260px !important;
+      order: -1;
+    }
+    /* Floating stat badge: reposition so it doesn't overflow */
+    .why-badge {
+      bottom: -12px !important;
+      right: 0 !important;
+    }
+
+    /* ── INNER PAGE — 2-col content + image sections ── */
+    .two-col-split {
+      grid-template-columns: 1fr !important;
+      gap: 32px !important;
+    }
+    /* Fixed-height images in 2-col layouts → responsive height */
+    .two-col-split .split-image {
+      height: 260px !important;
+    }
+
+    /* ── SERVICES PAGE — Transport & Hire 2-col ── */
+    .two-col-cards {
+      grid-template-columns: 1fr !important;
+    }
+
+    /* ── PARTS PAGE — What We Stock + Fieldmaster 2-col ── */
+    .parts-grid {
+      grid-template-columns: 1fr !important;
+    }
+
+    /* ── SALES PAGE — Second-hand + Fieldmaster 2-col ── */
+    .sales-grid {
+      grid-template-columns: 1fr !important;
+    }
+    /* Fieldmaster product list inside dark card: 2-col → 1-col */
+    .fieldmaster-list {
+      grid-template-columns: 1fr !important;
+    }
+
+    /* ── ABOUT PAGE — Story grid 2-col → 1-col ── */
+    .about-story-grid {
+      grid-template-columns: 1fr !important;
+      gap: 32px !important;
+    }
+    .about-story-grid .story-image {
+      height: 260px !important;
+    }
+    /* Team cards: 2-col stays OK at 375px since max-width:640px constrains them,
+       but force 1-col for very narrow screens */
+    .team-cards {
+      grid-template-columns: 1fr !important;
+      max-width: 320px !important;
+    }
+    /* Credentials: 3-col → 1-col */
+    .credentials-grid {
+      grid-template-columns: 1fr !important;
+    }
+
+    /* ── CONTACT PAGE — 2-col layout → stack ── */
+    .contact-grid {
+      grid-template-columns: 1fr !important;
+    }
+    /* Direct contacts inside contact: 2-col → 1-col */
+    .direct-contacts {
+      grid-template-columns: 1fr !important;
+    }
+    /* Form: phone + email row → 1-col */
+    .form-two-col {
+      grid-template-columns: 1fr !important;
+    }
+
+    /* ── FOOTER — 4-col → 1-col ── */
+    .footer-grid {
+      grid-template-columns: 1fr !important;
+      gap: 32px !important;
+    }
+    .footer-bottom {
+      flex-direction: column !important;
+      gap: 8px !important;
+      text-align: center !important;
+    }
+
+    /* ── CTA BANNER ── */
+    .cta-banner-inner {
+      flex-direction: column !important;
+      align-items: flex-start !important;
+      padding-top: 40px !important;
+      padding-bottom: 40px !important;
+    }
+
+    /* ── BUTTON TAP TARGETS ── ensure min 44px height ── */
+    a[href^="tel"],
+    a[href^="/contact"],
+    button[type="submit"] {
+      min-height: 44px;
+    }
+  }
+
+  /* ── MEDIUM BREAKPOINT (768px - 1023px) ── */
+  @media (min-width: 768px) and (max-width: 1023px) {
+    /* Trust bar: 2-col on tablet */
+    .trust-bar-grid {
+      grid-template-columns: 1fr 1fr !important;
+    }
+    .trust-bar-grid > div {
+      border-right: none !important;
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+    }
+    .trust-bar-grid > div:nth-child(odd) {
+      border-right: 1px solid rgba(255,255,255,0.08) !important;
+    }
+  }
 </style>
 
 <script>
