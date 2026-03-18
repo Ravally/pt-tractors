@@ -5,6 +5,74 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>{{ title }} | P&T Tractors — John Deere Specialists, Foxton NZ</title>
   <meta name="description" content="{{ description }}" />
+
+  {# ── CANONICAL ── #}
+  <link rel="canonical" href="https://ptractors.co.nz{{ page.url }}" />
+
+  {# ── OPEN GRAPH ── #}
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="P&T Tractors" />
+  <meta property="og:title" content="{{ title }} | P&T Tractors — John Deere Specialists, Foxton NZ" />
+  <meta property="og:description" content="{{ description }}" />
+  <meta property="og:url" content="https://ptractors.co.nz{{ page.url }}" />
+  <meta property="og:image" content="https://ptractors.co.nz/images/og-default.jpg" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:locale" content="en_NZ" />
+
+  {# ── LOCAL BUSINESS SCHEMA ── #}
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "AutoRepair",
+    "name": "P & T Tractor & Machinery Repairs Limited",
+    "alternateName": "P&T Tractors",
+    "url": "https://ptractors.co.nz",
+    "logo": "https://ptractors.co.nz/images/og-default.jpg",
+    "image": "https://ptractors.co.nz/images/og-default.jpg",
+    "description": "Foxton's trusted tractor and farm machinery repair specialists. John Deere experts, Fieldmaster authorised agents, 5 mobile service trucks across Manawatu and Central Districts.",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "65 Johnston St",
+      "addressLocality": "Foxton",
+      "postalCode": "4814",
+      "addressRegion": "Manawatu",
+      "addressCountry": "NZ"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": -40.4686,
+      "longitude": 175.3038
+    },
+    "telephone": "+6463637044",
+    "email": "admin@pttr.co.nz",
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday"],
+        "opens": "08:00",
+        "closes": "17:00"
+      }
+    ],
+    "sameAs": [
+      "https://www.facebook.com/pages/PT-Tractor-Repairs/311583358875486"
+    ],
+    "areaServed": [
+      {
+        "@type": "Place",
+        "name": "Manawatu"
+      },
+      {
+        "@type": "Place",
+        "name": "Central Districts, New Zealand"
+      }
+    ],
+    "priceRange": "$$",
+    "currenciesAccepted": "NZD",
+    "paymentAccepted": "Cash, Bank Transfer"
+  }
+  </script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
