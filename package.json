@@ -1,0 +1,20 @@
+{
+  "name": "pt-tractors",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "npx @tailwindcss/cli -i src/css/input.css -o src/css/app.css && npx eleventy",
+    "start": "npx eleventy --serve",
+    "tw": "npx @tailwindcss/cli -i src/css/input.css -o src/css/app.css --watch"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "@11ty/eleventy": "^3.1.2",
+    "@tailwindcss/cli": "^4.2.1",
+    "tailwindcss": "^4.2.1"
+  }
+}
