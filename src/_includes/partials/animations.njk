@@ -1,0 +1,75 @@
+<style>
+  /* ── HERO SLIDE-IN ─────────────────────────────────────────────── */
+  .hero-animate > * {
+    opacity: 0;
+    transform: translateY(24px);
+    animation: heroIn 0.7s ease forwards;
+  }
+  .hero-animate > *:nth-child(1) { animation-delay: 0.1s; }
+  .hero-animate > *:nth-child(2) { animation-delay: 0.25s; }
+  .hero-animate > *:nth-child(3) { animation-delay: 0.4s; }
+  .hero-animate > *:nth-child(4) { animation-delay: 0.55s; }
+  .hero-animate > *:nth-child(5) { animation-delay: 0.7s; }
+
+  @keyframes heroIn {
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  /* ── FADE-IN ON SCROLL ─────────────────────────────────────────── */
+  .fade-in {
+    opacity: 0;
+    transform: translateY(32px);
+    transition: opacity 0.65s ease, transform 0.65s ease;
+  }
+  .fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+  /* stagger children inside a fade-in parent */
+  .fade-in-children > * {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+  }
+  .fade-in-children.visible > *:nth-child(1) { opacity:1; transform:translateY(0); transition-delay: 0s; }
+  .fade-in-children.visible > *:nth-child(2) { opacity:1; transform:translateY(0); transition-delay: 0.1s; }
+  .fade-in-children.visible > *:nth-child(3) { opacity:1; transform:translateY(0); transition-delay: 0.2s; }
+  .fade-in-children.visible > *:nth-child(4) { opacity:1; transform:translateY(0); transition-delay: 0.3s; }
+  .fade-in-children.visible > *:nth-child(5) { opacity:1; transform:translateY(0); transition-delay: 0.4s; }
+  .fade-in-children.visible > *:nth-child(6) { opacity:1; transform:translateY(0); transition-delay: 0.5s; }
+
+  /* ── SERVICE CARD HOVER ────────────────────────────────────────── */
+  .service-card-hover {
+    transition: transform 0.22s ease, box-shadow 0.22s ease;
+    cursor: default;
+  }
+  .service-card-hover:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 16px 40px rgba(0,0,0,0.12);
+  }
+  .service-card-hover:hover .card-arrow {
+    transform: translateX(5px);
+  }
+  .card-arrow {
+    display: inline-block;
+    transition: transform 0.22s ease;
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.12 });
+
+    document.querySelectorAll('.fade-in, .fade-in-children').forEach(el => {
+      observer.observe(el);
+    });
+  });
+</script>
