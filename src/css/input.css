@@ -1,19 +1,61 @@
 @import "tailwindcss";
 
 @theme {
-  --color-black:      #0A1208;
-  --color-dark:       #111D0E;
-  --color-green-deep: #1A3318;
-  --color-green-mid:  #2A5225;
-  --color-green-lite: #3A7A32;
-  --color-gold:       #E8A000;
-  --color-gold-lite:  #F5B830;
-  --color-gold-dark:  #C07800;
-  --color-cream:      #F4EFE4;
-  --color-section:    #F8F5EF;
-  --color-muted:      #5A6A55;
-  --color-border:     #D4C9B0;
+  /* ── Primary (Machinery Green) ── */
+  --color-primary-50:  #ECFDF5;
+  --color-primary-100: #D1FAE5;
+  --color-primary-200: #A7F3D0;
+  --color-primary-300: #6EE7B7;
+  --color-primary-400: #34D399;
+  --color-primary-500: #2D6A4F;
+  --color-primary-600: #1B4332;
+  --color-primary-700: #14332A;
+  --color-primary-800: #0D2318;
+  --color-primary-900: #071510;
 
-  --font-heading: 'Oswald', sans-serif;
-  --font-body:    'Inter', sans-serif;
+  /* ── Secondary (Steel) ── */
+  --color-steel-50:  #F8FAFC;
+  --color-steel-100: #F1F5F9;
+  --color-steel-200: #E2E8F0;
+  --color-steel-300: #CBD5E1;
+  --color-steel-400: #94A3B8;
+  --color-steel-500: #64748B;
+  --color-steel-600: #475569;
+  --color-steel-700: #334155;
+  --color-steel-800: #1E293B;
+  --color-steel-900: #0F172A;
+
+  /* ── Accent (Amber) ── */
+  --color-accent-50:  #FFFBEB;
+  --color-accent-100: #FEF3C7;
+  --color-accent-200: #FDE68A;
+  --color-accent-300: #FCD34D;
+  --color-accent-400: #FBBF24;
+  --color-accent-500: #F59E0B;
+  --color-accent-600: #D97706;
+  --color-accent-700: #B45309;
+  --color-accent-800: #92400E;
+  --color-accent-900: #78350F;
+
+  /* ── Neutrals (Warm Gray) ── */
+  --color-neutral-50:  #FAFAF9;
+  --color-neutral-100: #F5F5F4;
+  --color-neutral-200: #E7E5E4;
+  --color-neutral-300: #D6D3D1;
+  --color-neutral-400: #A8A29E;
+  --color-neutral-500: #78716C;
+  --color-neutral-600: #57534E;
+  --color-neutral-700: #44403C;
+  --color-neutral-800: #292524;
+  --color-neutral-900: #1C1917;
+
+  /* ── Typography ── */
+  --font-heading: 'Plus Jakarta Sans', system-ui, sans-serif;
+  --font-body:    'Inter', system-ui, sans-serif;
+
+  /* ── Border Radius ── */
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.75rem;
+  --radius-xl: 1rem;
 }
